@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* universal style  */
 
@@ -30,6 +30,18 @@
   color:#727272;
 }
 
+.komola{
+    color:rgba(255, 144, 14, 1);
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.normal{
+    font-weight:500;
+}
+
 .btn{
     background-color: rgba(255, 144, 14, 1);
     font-size:1.25rem;
@@ -43,21 +55,32 @@
 }
 
 main{
-    max-width: 1440px;
+    max-width:1440px;
     margin:0 auto;
 }
 
 main>section{
   margin-top:100px;
 }
+.title{
+    font-size:45px;
+}
+
+.sec-des{
+        font-size:1rem;
+}
+
+.info{
+    width: 540px;
+    padding:30px;
+}
 
 /* header styles */
 
 header{
-    width:1400px;
+    width:100vw;
     background-color: rgba(255, 144, 14, 0.1);
-    margin:0 auto;
-    /* padding:0 200px; */
+    /* margin:0 auto; */
 }
 
 nav>ul>li{
@@ -100,8 +123,9 @@ nav>h2{
     margin-bottom:50px;
 }
 
-.image{
+.image>img{
     width:100%;
+    margin:0 auto;
 }
 
 
@@ -126,13 +150,74 @@ nav>h2{
 }
 
 
+/* fact section styles  */
+
+
+.fact-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:20px;
+    padding-left:50px;
+}
+
+.fact{
+    padding:10px;
+    border:1px solid rgba(255, 144, 14, 1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:200px;
+    height:200px;
+}
+
+.fact-info{
+    width: 540px;
+    padding:30px;
+}
+
+.fact img{
+    width:50px;
+    height:50px;
+}
+
+
 /* Responsive for small devices */
 
 @media screen and (max-width:576px){
-    nav,nav>ul{
+    nav,nav>ul,.team{
         flex-direction: column;
     }
-    header{
+    header,.banner-content{
         padding:0;
+        margin:0;
+        width:100vw;
+        margin-bottom:20px;
+        /* display:none; */
     }
+
+    .img-container{
+         grid-template-columns: repeat(1,1fr);
+    }
+
+    .fact-container{
+       
+        grid-template-columns: repeat(1,1fr);
+        padding-left:0;
+        row-gap: 0;
+    }
+
+}
+
+@media screen and (min-width:576px) and (max-width:992px){
+    .team{
+        flex-direction: column;
+    }
+
+    .fact-container{
+       
+        grid-template-columns: repeat(2,1fr);
+    }
+
 }
