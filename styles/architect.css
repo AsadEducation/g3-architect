@@ -18,24 +18,46 @@
     flex-direction: column;
 }
 
-dark1{
-    color:#131313;
+.dark1{
+    color:rgba(19, 19, 19, 1);
 }
 
-dark2{
+.dark2{
   color:#424242;
 }
 
-dark3{
+.dark3{
   color:#727272;
+}
+
+.btn{
+    background-color: rgba(255, 144, 14, 1);
+    font-size:1.25rem;
+    color:white;
+    padding:20px;
+    border:none;
+    border-radius: 8px;
+    font-weight: 700;
+    width:fit-content;
+    
+}
+
+main{
+    max-width: 1440px;
+    margin:0 auto;
+}
+
+main>section{
+  margin-top:100px;
 }
 
 /* header styles */
 
 header{
-    width:100vw;
+    width:1400px;
     background-color: rgba(255, 144, 14, 0.1);
     margin:0 auto;
+    /* padding:0 200px; */
 }
 
 nav>ul>li{
@@ -45,16 +67,72 @@ nav>ul>li{
 nav>ul>li>a{
     text-decoration: none;
     color:#424242;
-    font-size:18px;
+    font-size:1.25rem;
 }
 
 nav{
      justify-content: space-between;
+     align-items: center;
 }
 nav> ul{
     gap:50px;
 }
-nav>h1{
-    font-size:45px;
+nav>h2{
+    font-size:2rem;
     font-weight: bold;
+}
+
+/* banner styles */
+
+.banner-title{
+  font-size: 4rem;
+  font-weight:bold;
+}
+
+.banner-des{
+  font-size:1rem;
+}
+
+.banner-content{
+    width:850px;
+    margin:0 auto;
+    text-align: center;
+    margin-bottom:50px;
+}
+
+.image{
+    width:100%;
+}
+
+
+/* team section styles */
+
+.img-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:20px;
+}
+
+.team{
+    gap:20px;
+    align-items: center;
+}
+
+.feature{
+  flex-direction: column;
+  gap:15px;
+  padding:0 50px;
+  /* border: 2px solid red; */
+}
+
+
+/* Responsive for small devices */
+
+@media screen and (max-width:576px){
+    nav,nav>ul{
+        flex-direction: column;
+    }
+    header{
+        padding:0;
+    }
 }
